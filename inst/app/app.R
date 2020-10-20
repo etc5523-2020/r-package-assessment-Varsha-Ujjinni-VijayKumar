@@ -24,6 +24,7 @@ library(lubridate)
 library(shinythemes)
 library(DT)
 library(COVID19)
+library(COVID19top4)
 
 
 
@@ -72,40 +73,40 @@ library(COVID19)
 
 #reading data
 
-india <- read.csv(here("inst/extdata/india-covid.csv"))
-india$Date <- as.Date(india$Date,"%d/%m/%Y")
-usa <- read.csv(here("inst/extdata/us-covid.csv"))
-usa$date <- lubridate::as_date(usa$date)
-brazil <- read.csv(here("inst/extdata/cleaned-brazil.csv"))
-brazil$date <- as.Date(brazil$date,"%d/%m/%Y")
-russia <- read.csv(here("inst/extdata/russia-covid19.csv"))
-russia$Date.x <- as.Date(russia$Date.x,"%d/%m/%Y")
-#covid19 <- coronavirus %>% filter(country == c("US","India","Russia","Brazil"))
-corona <- COVID19::covid19() %>% filter(id == c("USA","IND","RUS","BRA"))
-
-US_distinct <- usa %>% 
-  select(state_name,lat,lng,positive) %>% 
-  group_by(state_name,lat,lng) %>% 
-  summarise(total = sum(positive)) %>% 
-  distinct(state_name, .keep_all = TRUE)
-
-IND_distinct <- india %>% 
-  select(states,Confirmed,lat,long) %>% 
-  group_by(states,lat,long) %>% 
-  summarise(total = sum(Confirmed)) %>% 
-  distinct(states, .keep_all = TRUE)
-
-RUS_distinct <- russia %>% 
-  select(state,Confirmed,lat,long) %>% 
-  group_by(state,lat,long) %>% 
-  summarise(total = sum(Confirmed)) %>% 
-  distinct(state, .keep_all = TRUE)
-
-BRAZ_distinct <- brazil %>% 
-  select(state_name,lat,long,cases) %>% 
-  group_by(state_name,lat,long) %>% 
-  summarise(total = sum(cases)) %>% 
-  distinct(state_name, .keep_all = TRUE)
+# india <- read.csv("inst/app/extdata/india-covid.csv")
+# india$Date <- as.Date(india$Date,"%d/%m/%Y")
+# usa <- read.csv("inst/app/extdata/us-covid.csv")
+# usa$date <- lubridate::as_date(usa$date)
+# brazil <- read.csv("inst/app/extdata/cleaned-brazil.csv")
+# brazil$date <- as.Date(brazil$date,"%d/%m/%Y")
+# russia <- read.csv(here("extdata","russia-covid19.csv"))
+# russia$Date.x <- as.Date(russia$Date.x,"%d/%m/%Y")
+# #covid19 <- coronavirus %>% filter(country == c("US","India","Russia","Brazil"))
+# corona <- COVID19::covid19() %>% filter(id == c("USA","IND","RUS","BRA"))
+# 
+# US_distinct <- usa %>% 
+#   select(state_name,lat,lng,positive) %>% 
+#   group_by(state_name,lat,lng) %>% 
+#   summarise(total = sum(positive)) %>% 
+#   distinct(state_name, .keep_all = TRUE)
+# 
+# IND_distinct <- india %>% 
+#   select(states,Confirmed,lat,long) %>% 
+#   group_by(states,lat,long) %>% 
+#   summarise(total = sum(Confirmed)) %>% 
+#   distinct(states, .keep_all = TRUE)
+# 
+# RUS_distinct <- russia %>% 
+#   select(state,Confirmed,lat,long) %>% 
+#   group_by(state,lat,long) %>% 
+#   summarise(total = sum(Confirmed)) %>% 
+#   distinct(state, .keep_all = TRUE)
+# 
+# BRAZ_distinct <- brazil %>% 
+#   select(state_name,lat,long,cases) %>% 
+#   group_by(state_name,lat,long) %>% 
+#   summarise(total = sum(cases)) %>% 
+#   distinct(state_name, .keep_all = TRUE)
 
 
 ui <- fluidPage(
@@ -148,7 +149,7 @@ ui <- fluidPage(
                         
                         tabPanel("United States of America",
                                  sidebarPanel(
-                                   selectInput("usstate","Choose a state name:",choices = usa$state_name,selected = "Alaska"),tags$h5("Please click on either the selectInput or the leaflet for getting the state of your choice"),width = 2),
+                                   stateInput("usstate",usa$state_name),tags$h5("Please click on either the selectInput or the leaflet for getting the state of your choice"),width = 2),
                                  mainPanel(
                                    fluidRow(
                                      column(12,
@@ -179,7 +180,7 @@ ui <- fluidPage(
                                              tags$h5(tags$strong("Please click on either the selectInput or the leaflet for getting the state of your choice"))))))),width = 10))),
                      tabPanel("India",
                               sidebarPanel(
-                                selectInput("instate","Choose a state name:",choices = india$states),tags$h5("Please click on either the selectInput or the leaflet for getting the state of your choice"),width = 2),
+                                stateInput("instate",india$states),tags$h5("Please click on either the selectInput or the leaflet for getting the state of your choice"),width = 2),
                               mainPanel(
                                 fluidRow(
                                   column(12,
@@ -210,7 +211,7 @@ ui <- fluidPage(
                                                              tags$h5(tags$strong("Please click on either the selectInput or the leaflet for getting the state of your choice")))))))),width = 10)),
                      tabPanel("Russia",
                               sidebarPanel(
-                                selectInput("russtate","Choose a state name:",choices = russia$state),tags$h5("Please click on either the selectInput or the leaflet for getting the state of your choice"),width = 2),
+                                stateInput("russtate",russia$state),tags$h5("Please click on either the selectInput or the leaflet for getting the state of your choice"),width = 2),
                               mainPanel(
                                 fluidRow(
                                   column(12,
@@ -243,7 +244,7 @@ ui <- fluidPage(
                      
                      tabPanel("Brazil",
                               sidebarPanel(
-                                selectInput("brastate","Choose a state name:",choices = brazil$state_name),width = 2,tags$h5("Please click on either the selectInput or the leaflet for getting the state of your choice")),
+                                stateInput("brastate",brazil$state_name),width = 2,tags$h5("Please click on either the selectInput or the leaflet for getting the state of your choice")),
                               mainPanel(
                                 fluidRow(
                                   column(12,
@@ -420,12 +421,7 @@ server <- function(input,output,session){
         )
         
         output$Leaf <- renderLeaflet({
-          leaflet(US_distinct) %>%
-            addTiles() %>% 
-            addAwesomeMarkers(icon = icons,lng = US_distinct$lng, lat = US_distinct$lat,
-                             popup = paste("State:",US_distinct$state_name,"<br>",
-                                           "Total Cases:",US_distinct$total,"<br>"),
-                             layerId = US_distinct$state_name)
+          leaflet_maps(US_distinct$lng,US_distinct$lat, US_distinct$state_name,US_distinct$total)
         })
         
         observeEvent(input$Leaf_marker_click, { 
@@ -477,12 +473,7 @@ server <- function(input,output,session){
         })
         
         output$Leafin <- renderLeaflet({
-          leaflet(IND_distinct) %>%
-            addTiles() %>% 
-            addAwesomeMarkers(icon = icons,lng = IND_distinct$long, lat = IND_distinct$lat,
-                              popup = paste("State:",IND_distinct$states,"<br>",
-                                            "Total Cases:",IND_distinct$total,"<br>"),
-                              layerId = IND_distinct$states)
+          leaflet_maps(IND_distinct$long,IND_distinct$lat,IND_distinct$states,IND_distinct$total)
         })
         
         observeEvent(input$Leafin_marker_click, { 
@@ -532,12 +523,7 @@ server <- function(input,output,session){
         })
         
         output$Leafrus <- renderLeaflet({
-          leaflet(RUS_distinct) %>%
-            addTiles() %>% 
-            addAwesomeMarkers(icon = icons,lng = RUS_distinct$long, lat = RUS_distinct$lat,
-                              popup = paste("State:",RUS_distinct$state,"<br>",
-                                            "Total Cases:",RUS_distinct$total,"<br>"),
-                              layerId = RUS_distinct$state)
+          leaflet_maps(RUS_distinct$long,RUS_distinct$lat,RUS_distinct$state,RUS_distinct$total)
         })
         
         observeEvent(input$Leafrus_marker_click, { 
@@ -585,12 +571,7 @@ server <- function(input,output,session){
         })
         
         output$Leafbra <- renderLeaflet({
-          leaflet(BRAZ_distinct) %>%
-            addTiles() %>% 
-            addAwesomeMarkers(icon = icons,lng = BRAZ_distinct$long, lat = BRAZ_distinct$lat,
-                              popup = paste("State:",BRAZ_distinct$state_name,"<br>",
-                                            "Total Cases:",BRAZ_distinct$total,"<br>"),
-                              layerId = BRAZ_distinct$state_name)
+          leaflet_maps(BRAZ_distinct$long,BRAZ_distinct$lat, BRAZ_distinct$state_name,BRAZ_distinct$total)
         })
         
         observeEvent(input$Leafbra_marker_click, { 
