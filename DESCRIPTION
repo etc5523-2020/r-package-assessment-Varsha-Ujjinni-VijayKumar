@@ -19,5 +19,6 @@ Suggests:
     knitr,
     rmarkdown,
     tidyverse,
-    ggplot2
+    ggplot2,
+    kableExtra
 VignetteBuilder: knitr

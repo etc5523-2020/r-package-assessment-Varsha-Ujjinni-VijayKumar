@@ -116,7 +116,7 @@ ui <- fluidPage(
                           tabsetPanel(
                             tabPanel("What is COVID-19?",
                                      sidebarPanel(
-                                              tags$img(src = 'inst/www/stop.gif', width = 500, height = 800),width = 4),
+                                              tags$img(src = 'stop.gif', width = 500, height = 800),width = 4),
                                      mainPanel(
                                      fluidRow(
                                        column(12,

@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(COVID19top4)
 library(tidyverse)
+library(kableExtra)
 ```
 
 This Package helps users in knowing the top 4 countries with the highest number of coronavirus cases throughout the world. The top 4 countries as of October 2020 are:
