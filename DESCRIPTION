@@ -1,5 +1,5 @@
 Package: COVID19top4
-Title: A shiny app for top 4 COVID19 affected countries.
+Title: A shiny app for top 4 COVID19 affected countries
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Varsha",

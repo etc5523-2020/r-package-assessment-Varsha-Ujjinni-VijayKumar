@@ -4,7 +4,13 @@
 \alias{leaflet_maps}
 \title{Leaflet maps for each country}
 \usage{
-leaflet_maps(data_frame, longitude, latitude, state, total_cases)
+BRA_distinct
+
+IND_distinct
+
+USA_distinct
+
+RUS_distinct
 }
 \arguments{
 \item{data_frame:}{A dataframe which is passed for the leaflet to be produced from}
@@ -16,14 +22,6 @@ leaflet_maps(data_frame, longitude, latitude, state, total_cases)
 \item{state:}{A column passed from the dataframe which contains the state names for the popup on the leaflet maps.}
 
 \item{total_cases:}{A column passed from the dataframe which cintains the total number of cases for each state.}
-
-\item{BRA_distinct:}{A dataset wrangled from the individual state datasets for leaflet maps, can be used as datasets for the leaflet maps from the data folder.}
-
-\item{IND_distinct:}{A dataset wrangled from the individual state datasets for leaflet maps, can be used as datasets for the leaflet maps from the data folder.}
-
-\item{USA_distinct:}{A dataset wrangled from the individual state datasets for leaflet maps, can be used as datasets for the leaflet maps from the data folder.}
-
-\item{RUS_distinct:}{A dataset wrangled from the individual state datasets for leaflet maps, can be used as datasets for the leaflet maps from the data folder.}
 }
 \value{
 returns a leaflet map with longitudes and latitudes for the map with state names.
