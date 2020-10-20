@@ -9,6 +9,3 @@ launch_app()
 \description{
 This function helps the user of the package to get easily the shiny application dashboard for COVID19 cases which depicts the countries with the highest number of cases within the top 4 countries until October 2020. It launches the application for user interactivity and a number of visualizations.
 }
-\details{
-@export
-}
