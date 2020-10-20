@@ -72,13 +72,13 @@ library(COVID19)
 
 #reading data
 
-india <- read.csv(here("data","india-covid.csv"))
+india <- read.csv(here("inst/extdata/india-covid.csv"))
 india$Date <- as.Date(india$Date,"%d/%m/%Y")
-usa <- read.csv(here("data","us-covid.csv"))
+usa <- read.csv(here("inst/extdata/us-covid.csv"))
 usa$date <- lubridate::as_date(usa$date)
-brazil <- read.csv(here("data","cleaned-brazil.csv"))
+brazil <- read.csv(here("inst/extdata/cleaned-brazil.csv"))
 brazil$date <- as.Date(brazil$date,"%d/%m/%Y")
-russia <- read.csv(here("data","russia-covid19.csv"))
+russia <- read.csv(here("inst/extdata/russia-covid19.csv"))
 russia$Date.x <- as.Date(russia$Date.x,"%d/%m/%Y")
 #covid19 <- coronavirus %>% filter(country == c("US","India","Russia","Brazil"))
 corona <- COVID19::covid19() %>% filter(id == c("USA","IND","RUS","BRA"))
@@ -116,7 +116,7 @@ ui <- fluidPage(
                           tabsetPanel(
                             tabPanel("What is COVID-19?",
                                      sidebarPanel(
-                                              tags$img(src = 'stop.gif', width = 500, height = 800),width = 4),
+                                              tags$img(src = 'inst/www/stop.gif', width = 500, height = 800),width = 4),
                                      mainPanel(
                                      fluidRow(
                                        column(12,
