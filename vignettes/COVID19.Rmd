@@ -1,0 +1,62 @@
+---
+title: "COVID19 in top 4 countries"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{COVID19 in top 4 countries}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(COVID19top4)
+library(tidyverse)
+```
+
+This Package helps users in knowing the top 4 countries with the highest number of coronavirus cases throughout the world. The top 4 countries as of October 2020 are:
+
+1. [United States of America](https://www.kaggle.com/sudalairajkumar/covid19-in-usa) 
+
+1. [India](https://www.kaggle.com/sudalairajkumar/covid19-in-india) 
+
+1. [Brazil](https://www.kaggle.com/unanimad/corona-virus-brazil)
+
+1. [Russia](https://www.kaggle.com/kapral42/covid19-russia-regions-cases)
+
+in order. This package has a shiny app which gives the analysis and visualizations for these countries throughout the COVID19 pandemic. The data for these analyses and visualizations are taken from the [COVID19 package](https://cran.r-project.org/package=COVID19) on CRAN and a couple of datasets from Kaggle for individual state datasets for each state within the country.These datasets all contain the total number of cases, deaths and recovered over time.
+
+Some Examples:
+
+The table helps us find the total number of cases by country for each date.
+
+```{r fig.width=10}
+corona %>% group_by(date, id) %>% 
+  summarise(total = sum(confirmed)) %>% tail(10) %>% 
+  knitr::kable() %>% kableExtra::kable_styling(bootstrap_options = "striped")
+```
+
+```{r warning=FALSE,fig.align='center',fig.height=5,fig.width=5}
+corona %>% 
+  group_by(date,id) %>%
+  summarise(total = sum(confirmed)) %>% 
+  ggplot(aes(x = date, y = total,color =id))+
+  geom_line()+ 
+  facet_wrap(~id) +
+  theme_minimal()
+```
+
+```{r warning=FALSE,fig.align='center',fig.height=5,fig.width=5}
+corona %>% group_by(date,id) %>% 
+  summarise(school_closing = sum(school_closing)) %>% 
+  ggplot(aes(x = date, y = school_closing, color = id))+
+  geom_line()+
+  facet_wrap(~id)+
+  theme_minimal()
+```
+

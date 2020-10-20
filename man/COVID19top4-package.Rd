@@ -9,7 +9,7 @@
 This package helps in containing a shiny application which launches COVID19 pandemic situation in the top four most affected countries as of October, 2020. This contains functions which help launch and use the app for information and knowledge on the pandemic during the time. A time graph to the world map for visualization is embeded into the application.
 }
 \author{
-\strong{Maintainer}: Varsha Ujjinni Vijay Kumar \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Varsha Ujjinni Vijay Kumar \email{varshaujjinnivijaykumar@gmail.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
 
 }
 \keyword{internal}
