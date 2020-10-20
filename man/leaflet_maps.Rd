@@ -28,4 +28,8 @@ Leaflet maps for each country
 leaflet(data_frame = df, longitude = df$lng,latitude = df$lat, state = df$state,total = df$total_cases)
 }
 
+
+}
+\author{
+Varsha Ujjinni Vijay Kumar
 }

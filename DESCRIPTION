@@ -20,5 +20,10 @@ Suggests:
     rmarkdown,
     tidyverse,
     ggplot2,
-    kableExtra
+    kableExtra,
+    testthat
 VignetteBuilder: knitr
+Imports: 
+    usethis,
+    shiny,
+    leaflet

@@ -1,5 +1,7 @@
 #' Leaflet maps for each country
 #' 
+#' @author Varsha Ujjinni Vijay Kumar
+#' 
 #' @param data_frame: A dataframe which is passed for the leaflet to be produced from
 #' @param longitude: A column passed from the dataframe which contains the longitude for the maps.
 #' @param latitude: A column passed from the dataframe which contains the latitude for the maps.
@@ -12,6 +14,7 @@
 #' \dontrun{
 #' leaflet(data_frame = df, longitude = df$lng,latitude = df$lat, state = df$state,total = df$total_cases)
 #' }
+#' 
 #' 
 #' @export
 

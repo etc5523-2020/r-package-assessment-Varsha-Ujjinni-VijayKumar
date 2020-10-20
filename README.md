@@ -8,7 +8,7 @@ The goal of _COVID19top4_ is to launch a shiny application for the coronavirus d
 
 ## Installation
 
-You can install the  _COVID19top4_ with:
+You can install the  _COVID19top4_ package on GITHUB with:
 
 ``` r
 devtools::install_github("https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar")
