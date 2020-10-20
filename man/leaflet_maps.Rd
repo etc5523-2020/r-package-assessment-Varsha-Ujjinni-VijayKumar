@@ -4,17 +4,9 @@
 \alias{leaflet_maps}
 \title{Leaflet maps for each country}
 \usage{
-BRA_distinct
-
-IND_distinct
-
-USA_distinct
-
-RUS_distinct
+leaflet_maps(longitude, latitude, state, total_cases)
 }
 \arguments{
-\item{data_frame:}{A dataframe which is passed for the leaflet to be produced from}
-
 \item{longitude:}{A column passed from the dataframe which contains the longitude for the maps.}
 
 \item{latitude:}{A column passed from the dataframe which contains the latitude for the maps.}
@@ -31,7 +23,7 @@ Leaflet maps for each country
 }
 \examples{
 \dontrun{
-leaflet(data_frame = df, longitude = df$lng,latitude = df$lat, state = df$state,total = df$total_cases)
+leaflet(longitude = df$lng,latitude = df$lat, state = df$state,total = df$total_cases)
 }
 
 
