@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>COVID19top4: A Shiny App for Top 4 COVID19 Affected Countries — COVID19top4-package • COVID19top4</title>
+<title>COVID19 dataset for Brazilian individual states — BRA_distinct • COVID19top4</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="COVID19top4: A Shiny App for Top 4 COVID19 Affected Countries — COVID19top4-package" />
-<meta property="og:description" content="It helps in containing a shiny application which launches COVID19 pandemic situation in the top four most affected countries as of October, 2020. This contains functions which help launch and use the app for information and knowledge on the pandemic during the time. A time graph to the world map for visualization is embeded into the application." />
+<meta property="og:title" content="COVID19 dataset for Brazilian individual states — BRA_distinct" />
+<meta property="og:description" content="A dataset for the number of coronavirus cases within the brazilian states and territories." />
 
 
 
@@ -114,20 +114,30 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>COVID19top4: A Shiny App for Top 4 COVID19 Affected Countries</h1>
+    <h1>COVID19 dataset for Brazilian individual states</h1>
     
-    <div class="hidden name"><code>COVID19top4-package.Rd</code></div>
+    <div class="hidden name"><code>BRA_distinct.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>It helps in containing a shiny application which launches COVID19 pandemic situation in the top four most affected countries as of October, 2020. This contains functions which help launch and use the app for information and knowledge on the pandemic during the time. A time graph to the world map for visualization is embeded into the application.</p>
+    <p>A dataset for the number of coronavirus cases within the brazilian states and territories.</p>
     </div>
 
+    <pre class="usage"><span class='va'>BRA_distinct</span></pre>
 
 
-    <h2 class="hasAnchor" id="author"><a class="anchor" href="#author"></a>Author</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p><strong>Maintainer</strong>: Varsha Ujjinni Vijay Kumar <a href='mailto:varshaujjinnivijaykumar@gmail.com'>varshaujjinnivijaykumar@gmail.com</a></p>
+    <p>A dataframe of 27 rows and  4 columns</p><ul>
+<li><p><strong>state_name</strong>: The name of the states and territories</p></li>
+<li><p><strong>lat</strong>: The latitude of the state</p></li>
+<li><p><strong>long</strong>: The longitude of the state</p></li>
+<li><p><strong>total</strong>: The total number of cases within each state</p></li>
+</ul>
+
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>taken from the above websites and some data acquiring from wikipedia from my end</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
