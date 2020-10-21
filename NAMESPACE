@@ -3,3 +3,5 @@
 export(launch_app)
 export(leaflet_maps)
 export(stateInput)
+import(leaflet)
+importFrom(magrittr,"%>%")

@@ -10,6 +10,7 @@ if(!require(DT)) install.packages("DT", repos = "http://cran.us.r-project.org")
 if(!require(leaflet)) install.packages("leaflet", repos = "http://cran.us.r-project.org")
 if(!require(lubridate)) install.packages("lubridate", repos = "http://cran.us.r-project.org")
 if(!require(COVID19)) install.packages("COVID19", repos = "http://cran.us.r-project.org")
+#if(!require(COVID19top4)) install.packages("COVID19top4", repos = "devtools::install_github("https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar")")
 
 
 #loading libraries
@@ -18,7 +19,7 @@ library(tidyverse)
 library(shiny)
 library(shinydashboard)
 library(plotly)
-library(here)
+#library(here)
 library(leaflet)
 library(lubridate)
 library(shinythemes)

@@ -95,3 +95,67 @@
 #' @usage russia
 "russia"
 
+
+#'COVID19 dataset for Brazilian individual states
+#'
+#'A dataset for the number of coronavirus cases within the brazilian states and territories.
+#'
+#'@format A dataframe of 27 rows and  4 columns
+#' * **state_name**: The name of the states and territories
+#' * **lat**: The latitude of the state
+#' * **long**: The longitude of the state
+#' * **total**: The total number of cases within each state
+#' 
+#' @references taken from the above websites and some data acquiring from wikipedia from my end 
+#' @docType data
+#' @name BRA_distinct
+#' @usage BRA_distinct
+"BRA_distinct"
+
+#'COVID19 dataset for USA individual states
+#'
+#'A dataset for the number of coronavirus cases within the USA states and territories.
+#'
+#'@format A dataframe of 54 rows and  4 columns
+#' * **state_name**: The name of the states and territories
+#' * **lat**: The latitude of the state
+#' * **lng**: The longitude of the state
+#' * **total**: The total number of cases within each state
+#' 
+#' @references taken from the above kaggle websites and some data acquiring from wikipedia from my end 
+#' @docType data
+#' @name USA_distinct
+#' @usage USA_distinct
+"USA_distinct"
+
+#'COVID19 dataset for Indian individual states
+#'
+#'A dataset for the number of coronavirus cases within the Indian states and territories.
+#'
+#'@format A dataframe of 37 rows and  4 columns
+#' * **states**: The name of the states and territories
+#' * **lat**: The latitude of the state
+#' * **long**: The longitude of the state
+#' * **total**: The total number of cases within each state
+#' 
+#' @references taken from the above websites and some data acquiring from wikipedia from my end 
+#' @docType data
+#' @name IND_distinct
+#' @usage IND_distinct
+"IND_distinct"
+
+#'COVID19 dataset for Russian individual states
+#'
+#'A dataset for the number of coronavirus cases within the Russian states and territories.
+#'
+#'@format A dataframe of 84 rows and  4 columns
+#' * **state**: The name of the states and territories
+#' * **lat**: The latitude of the state
+#' * **long**: The longitude of the state
+#' * **total**: The total number of cases within each state
+#' 
+#' @references taken from the above websites and some data acquiring from wikipedia from my end 
+#' @docType data
+#' @name RUS_distinct
+#' @usage RUS_distinct
+"RUS_distinct"

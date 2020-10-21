@@ -7,15 +7,12 @@
 stateInput(id, x)
 }
 \arguments{
-\item{id:}{The input ID of the select Input that is passed to the app by the user.}
+\item{id}{The input ID of the select Input that is passed to the app by the user.}
 
-\item{x:}{The column in the dataframe that contains the country names.}
+\item{x}{The column in the dataframe that contains the country names.}
 }
 \description{
-Creates a shiny select input to select a state from a column of the dataset
-}
-\details{
-The purpose of this function is to provide a quick select input for different values in the column.
+This function helps us get the select Input function from the shiny package using the two arguments id and x, using just the two arguments.The purpose of this function is to provide a quick select input for different values in the column.
 }
 \examples{
 \dontrun{

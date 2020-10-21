@@ -1,13 +1,12 @@
 #' State Select Input
 #' 
-#' Creates a shiny select input to select a state from a column of the dataset
+#' @description This function helps us get the select Input function from the shiny package using the two arguments id and x, using just the two arguments.The purpose of this function is to provide a quick select input for different values in the column.  
 #' 
-#' The purpose of this function is to provide a quick select input for different values in the column.
 #' 
 #' @author Varsha Ujjinni Vijay Kumar
 #' 
-#' @param id: The input ID of the select Input that is passed to the app by the user.
-#' @param x: The column in the dataframe that contains the country names.
+#' @param id The input ID of the select Input that is passed to the app by the user.
+#' @param x The column in the dataframe that contains the country names.
 #' 
 #' @examples 
 #' \dontrun{

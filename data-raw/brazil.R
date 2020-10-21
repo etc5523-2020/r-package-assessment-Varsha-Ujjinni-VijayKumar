@@ -6,7 +6,7 @@
 
 #reading the csv file 
 
-brazil <- read.csv(here("inst/extdata/cleaned-brazil.csv"))
+brazil <- read.csv("inst/extdata/cleaned-brazil.csv")
 
 #wrangling dataset
 
