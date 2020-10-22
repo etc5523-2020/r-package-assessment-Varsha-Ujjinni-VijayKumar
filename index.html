@@ -92,7 +92,7 @@
 <a href="#example" class="anchor"></a>Example</h2>
 <p>To run the app use the R code mentioned below.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">covid19viz</span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar">COVID19top4</a></span><span class="op">)</span>
 <span class="fu"><a href="reference/launch_app.html">launch_app</a></span><span class="op">(</span><span class="op">)</span></pre></div>
 <p>Below is a basic preview of the app in action.</p>
 <p><img src="man/images/apppre.gif"></p>
@@ -101,9 +101,11 @@
 <h2 class="hasAnchor">
 <a href="#other-functions-within-this-package" class="anchor"></a>Other functions within this package:</h2>
 <p>#creates a select Input for states:</p>
-<p>stateInput(id,x)</p>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="reference/stateInput.html">stateInput</a></span><span class="op">(</span><span class="va">id</span>,<span class="va">x</span><span class="op">)</span></pre></div>
 <p>#returns leaflet maps:</p>
-<p>leaflet_maps(longitude,latitude,state_name,total_cases)</p>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="fu"><a href="reference/leaflet_maps.html">leaflet_maps</a></span><span class="op">(</span><span class="va">longitude</span>,<span class="va">latitude</span>,<span class="va">state_name</span>,<span class="va">total_cases</span><span class="op">)</span></pre></div>
 <p>This is a basic example which shows you how to you can use the datasets within this package:</p>
 <pre class="{r}"><code><a href="https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar">library(COVID19top4)
 corona</a></code></pre>
