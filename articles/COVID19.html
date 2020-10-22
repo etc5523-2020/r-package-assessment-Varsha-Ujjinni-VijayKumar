@@ -110,6 +110,7 @@
 <li><p><a href="https://www.kaggle.com/kapral42/covid19-russia-regions-cases">Russia</a></p></li>
 </ol>
 <p>in order. This package has a shiny app which gives the analysis and visualizations for these countries throughout the COVID19 pandemic. The data for these analyses and visualizations are taken from the <a href="https://cran.r-project.org/package=COVID19">COVID19 package</a> on CRAN and a couple of datasets from Kaggle for individual state datasets for each state within the country.These datasets all contain the total number of cases, deaths and recovered over time.</p>
+<p><strong>NOTE!!</strong> : Please click on the country for the link to these datasets.</p>
 <p>Some Examples:</p>
 <p>The table helps us find the total number of cases by country for each date.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
@@ -251,7 +252,7 @@ RUS
   <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">id</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; `summarise()` regrouping output by 'date' (override with `.groups` argument)</span></pre></div>
-<p><img src="COVID19_files/figure-html/unnamed-chunk-3-1.png" width="480" style="display: block; margin: auto;"></p>
+<p><img src="COVID19_files/figure-html/unnamed-chunk-3-1.png" width="480" style="display: block; margin: auto auto auto 0;"></p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="va">corona</span> <span class="op">%&gt;%</span> <span class="fu">group_by</span><span class="op">(</span><span class="va">date</span>,<span class="va">id</span><span class="op">)</span> <span class="op">%&gt;%</span> 
   <span class="fu">summarise</span><span class="op">(</span>school_closing <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">school_closing</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
@@ -260,7 +261,7 @@ RUS
   <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">id</span><span class="op">)</span><span class="op">+</span>
   <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; `summarise()` regrouping output by 'date' (override with `.groups` argument)</span></pre></div>
-<p><img src="COVID19_files/figure-html/unnamed-chunk-4-1.png" width="480" style="display: block; margin: auto;"></p>
+<p><img src="COVID19_files/figure-html/unnamed-chunk-4-1.png" width="480" style="display: block; margin: auto auto auto 0;"></p>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
