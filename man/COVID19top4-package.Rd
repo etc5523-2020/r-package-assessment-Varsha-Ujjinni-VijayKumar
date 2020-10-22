@@ -8,6 +8,14 @@
 \description{
 It helps in containing a shiny application which launches COVID19 pandemic situation in the top four most affected countries as of October, 2020. This contains functions which help launch and use the app for information and knowledge on the pandemic during the time. A time graph to the world map for visualization is embeded into the application.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar}
+  \item Report bugs at \url{https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Varsha Ujjinni Vijay Kumar \email{varshaujjinnivijaykumar@gmail.com}
 

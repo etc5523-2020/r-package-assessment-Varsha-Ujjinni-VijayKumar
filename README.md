@@ -27,12 +27,14 @@ Below is a basic preview of the app in action.
 
 ![](man/images/apppre.gif)
 
-## Other fucntions within this package:
+## Other functions within this package:
 
 #creates a select Input for states:
+
 stateInput(id,x)
 
-# returns leaflet maps:
+#returns leaflet maps:
+
 leaflet_maps(longitude,latitude,state_name,total_cases)
 
 This is a basic example which shows you how to you can use the datasets within this package:
@@ -50,6 +52,6 @@ corona
 1. russia: This contains the number of cases, recovered and deaths for Russia and its states.
 1. USA_distinct: Distinct states for USA and their individual counts.
 1. IND_distinct: Distinct states for India and their individual counts.
-1. BRAZ_distinct: Distinct states for Brazil and their individual counts.
+1. BRA_distinct: Distinct states for Brazil and their individual counts.
 1. RUS_distinct: Distinct states for Russia and their individual counts.
 
