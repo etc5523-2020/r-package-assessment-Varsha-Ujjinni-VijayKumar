@@ -32,6 +32,8 @@ This Package helps users in knowing the top 4 countries with the highest number 
 
 in order. This package has a shiny app which gives the analysis and visualizations for these countries throughout the COVID19 pandemic. The data for these analyses and visualizations are taken from the [COVID19 package](https://cran.r-project.org/package=COVID19) on CRAN and a couple of datasets from Kaggle for individual state datasets for each state within the country.These datasets all contain the total number of cases, deaths and recovered over time.
 
+**NOTE!!** : Please click on the country for the link to these datasets.
+
 Some Examples:
 
 The table helps us find the total number of cases by country for each date.
@@ -42,7 +44,7 @@ corona %>% group_by(date, id) %>%
   knitr::kable() %>% kableExtra::kable_styling(bootstrap_options = "striped")
 ```
 
-```{r warning=FALSE,fig.align='center',fig.height=5,fig.width=5}
+```{r warning=FALSE,fig.align='left',fig.height=5,fig.width=5}
 corona %>% 
   group_by(date,id) %>%
   summarise(total = sum(confirmed)) %>% 
@@ -52,7 +54,7 @@ corona %>%
   theme_minimal()
 ```
 
-```{r warning=FALSE,fig.align='center',fig.height=5,fig.width=5}
+```{r warning=FALSE,fig.align='left',fig.height=5,fig.width=5}
 corona %>% group_by(date,id) %>% 
   summarise(school_closing = sum(school_closing)) %>% 
   ggplot(aes(x = date, y = school_closing, color = id))+

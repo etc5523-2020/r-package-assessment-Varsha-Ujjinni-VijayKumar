@@ -2,6 +2,7 @@
 # COVID19top4                 <img src="man/images/logo.png" width="170" height="170" align ="right">
 <!-- badges: start -->
 [![R build status](https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar/actions)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 <!-- badges: end -->
 
 The goal of _COVID19top4_ is to launch a shiny application for the coronavirus dashboard which shows the visualizations and analysis for the top 4 COVID affected countries as of October 2020. It contains functions which help launch the application and some UI and server functions for the user to use. There are a couple of datasets for the user to use within the package which also was used for the analysis and visualizations of the shiny app.
@@ -46,7 +47,7 @@ This is a basic example which shows you how to you can use the datasets within t
 
 ```{r}
 library(COVID19top4)
-corona
+corona 
 ```
 ## Datasets available
 
