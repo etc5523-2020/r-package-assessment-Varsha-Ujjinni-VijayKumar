@@ -20,7 +20,7 @@ devtools::install_github("https://github.com/etc5523-2020/r-package-assessment-V
 To run the app use the R code mentioned below.
 
 ``` r
-library(covid19viz)
+library(COVID19top4)
 launch_app()
 ```
 Below is a basic preview of the app in action.
@@ -31,11 +31,16 @@ Below is a basic preview of the app in action.
 
 #creates a select Input for states:
 
+``` r
 stateInput(id,x)
+```
 
 #returns leaflet maps:
 
+```r
 leaflet_maps(longitude,latitude,state_name,total_cases)
+```
+
 
 This is a basic example which shows you how to you can use the datasets within this package:
 

@@ -36,7 +36,7 @@ Some Examples:
 
 The table helps us find the total number of cases by country for each date.
 
-```{r fig.width=10,fig.align='center'}
+```{r fig.width=5,fig.align='center',fig.height=5}
 corona %>% group_by(date, id) %>% 
   summarise(total = sum(confirmed)) %>% tail(10) %>% 
   knitr::kable() %>% kableExtra::kable_styling(bootstrap_options = "striped")
