@@ -72,9 +72,10 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="covid19top4-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#covid19top4-" class="anchor"></a>COVID19top4 <img src="https://spectrum.ieee.org/image/MzYwMTY5Mw.jpeg" width="150" height="150" align="right">
+<a href="#covid19top4-" class="anchor"></a>COVID19top4 <img src="man/images/logo.png" width="170" height="170" align="right">
 </h1></div>
 <!-- badges: start -->
 
@@ -84,16 +85,49 @@
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the <em>COVID19top4</em> package on GITHUB with:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar"</span><span class="op">)</span></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
+<p>To run the app use the R code mentioned below.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">covid19viz</span><span class="op">)</span>
+<span class="fu"><a href="reference/launch_app.html">launch_app</a></span><span class="op">(</span><span class="op">)</span></pre></div>
+<p>Below is a basic preview of the app in action.</p>
+<p><img src="man/images/apppre.gif"></p>
+</div>
+<div id="other-fucntions-within-this-package" class="section level2">
+<h2 class="hasAnchor">
+<a href="#other-fucntions-within-this-package" class="anchor"></a>Other fucntions within this package:</h2>
+<p>#creates a select Input for states: stateInput(id,x)</p>
+</div>
+</div>
+<div id="returns-leaflet-maps" class="section level1">
+<h1 class="hasAnchor">
+<a href="#returns-leaflet-maps" class="anchor"></a>returns leaflet maps:</h1>
+<p>leaflet_maps(longitude,latitude,state_name,total_cases)</p>
+<p>This is a basic example which shows you how to you can use the datasets within this package:</p>
 <pre class="{r}"><code>library(COVID19top4)
 corona</code></pre>
+<div id="datasets-available" class="section level2">
+<h2 class="hasAnchor">
+<a href="#datasets-available" class="anchor"></a>Datasets available</h2>
+<ol>
+<li>corona: This contains filtered data for USA,India, Brazil and Russia from the COVID19 package of CRAN.</li>
+<li>usa: This contains the cases, recovered for United States of America and its states.</li>
+<li>india: This contains the number of cases, recovered and deaths for India and its states.</li>
+<li>brazil: This contains the number of cases, recovered and deaths for Brazil and its states.</li>
+<li>russia: This contains the number of cases, recovered and deaths for Russia and its states.</li>
+<li>USA_distinct: Distinct states for USA and their individual counts.</li>
+<li>IND_distinct: Distinct states for India and their individual counts.</li>
+<li>BRAZ_distinct: Distinct states for Brazil and their individual counts.</li>
+<li>RUS_distinct: Distinct states for Russia and their individual counts.</li>
+</ol>
 </div>
 </div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
