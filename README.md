@@ -1,5 +1,5 @@
 
-# COVID19top4                 <img src="https://spectrum.ieee.org/image/MzYwMTY5Mw.jpeg" width="150" height="150" align ="right">
+# COVID19top4                 <img src="man/images/logo.png" width="170" height="170" align ="right">
 <!-- badges: start -->
 [![R build status](https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar/actions)
 <!-- badges: end -->
@@ -11,16 +11,45 @@ The goal of _COVID19top4_ is to launch a shiny application for the coronavirus d
 You can install the  _COVID19top4_ package on GITHUB with:
 
 ``` r
+# install.packages("devtools")
 devtools::install_github("https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar")
-
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+To run the app use the R code mentioned below.
+
+``` r
+library(covid19viz)
+launch_app()
+```
+Below is a basic preview of the app in action.
+
+![](man/images/apppre.gif)
+
+## Other fucntions within this package:
+
+#creates a select Input for states:
+stateInput(id,x)
+
+# returns leaflet maps:
+leaflet_maps(longitude,latitude,state_name,total_cases)
+
+This is a basic example which shows you how to you can use the datasets within this package:
 
 ```{r}
 library(COVID19top4)
 corona
 ```
+## Datasets available
+
+1. corona: This contains filtered data for USA,India, Brazil and Russia from the COVID19 package of CRAN.
+1. usa: This contains the cases, recovered for United States of America and its states.
+1. india: This contains the number of cases, recovered and deaths for India and its states.
+1. brazil: This contains the number of cases, recovered and deaths for Brazil and its states.
+1. russia: This contains the number of cases, recovered and deaths for Russia and its states.
+1. USA_distinct: Distinct states for USA and their individual counts.
+1. IND_distinct: Distinct states for India and their individual counts.
+1. BRAZ_distinct: Distinct states for Brazil and their individual counts.
+1. RUS_distinct: Distinct states for Russia and their individual counts.
 
