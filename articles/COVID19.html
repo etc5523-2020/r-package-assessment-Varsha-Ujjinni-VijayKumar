@@ -95,20 +95,7 @@
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar">COVID19top4</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span>
-<span class="co">#&gt; ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──</span>
-<span class="co">#&gt; ✔ ggplot2 3.3.2     ✔ purrr   0.3.4</span>
-<span class="co">#&gt; ✔ tibble  3.0.4     ✔ dplyr   1.0.2</span>
-<span class="co">#&gt; ✔ tidyr   1.1.2     ✔ stringr 1.4.0</span>
-<span class="co">#&gt; ✔ readr   1.4.0     ✔ forcats 0.5.0</span>
-<span class="co">#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──</span>
-<span class="co">#&gt; ✖ dplyr::filter() masks stats::filter()</span>
-<span class="co">#&gt; ✖ dplyr::lag()    masks stats::lag()</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/">kableExtra</a></span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'kableExtra'</span>
-<span class="co">#&gt; The following object is masked from 'package:dplyr':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     group_rows</span></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://haozhu233.github.io/kableExtra/">kableExtra</a></span><span class="op">)</span></pre></div>
 <p>This Package helps users in knowing the top 4 countries with the highest number of coronavirus cases throughout the world. The top 4 countries as of October 2020 are:</p>
 <ol style="list-style-type: decimal">
 <li><p><a href="https://www.kaggle.com/sudalairajkumar/covid19-in-usa">United States of America</a></p></li>
@@ -118,7 +105,9 @@
 </ol>
 <p>in order. This package has a shiny app which gives the analysis and visualizations for these countries throughout the COVID19 pandemic. The data for these analyses and visualizations are taken from the <a href="https://cran.r-project.org/package=COVID19">COVID19 package</a> on CRAN and a couple of datasets from Kaggle for individual state datasets for each state within the country.These datasets all contain the total number of cases, deaths and recovered over time.</p>
 <p><strong>NOTE!!</strong> : Please click on the country for the link to these datasets.</p>
-<p>Some Examples:</p>
+<div id="some-examples-on-using-the-dataset-within-the-package" class="section level2">
+<h2 class="hasAnchor">
+<a href="#some-examples-on-using-the-dataset-within-the-package" class="anchor"></a>Some Examples on using the dataset within the package:</h2>
 <p>The table helps us find the total number of cases by country for each date.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="va">corona</span> <span class="op">%&gt;%</span> <span class="fu">group_by</span><span class="op">(</span><span class="va">date</span>, <span class="va">id</span><span class="op">)</span> <span class="op">%&gt;%</span> 
@@ -269,11 +258,15 @@ RUS
   <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; `summarise()` regrouping output by 'date' (override with `.groups` argument)</span></pre></div>
 <p><img src="COVID19_files/figure-html/unnamed-chunk-4-1.png" width="480" style="display: block; margin: auto auto auto 0;"></p>
+<p><em>The above examples are just a glimpse on how to use the datasets within this package, there are other datasets available for your exploration.</em></p>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
