@@ -1,5 +1,5 @@
 
-# COVID19top4                 <img src="man/images/logo.png" width="170" height="170" align ="right">
+# COVID19top4                 <img src="man/figures/logo.png" width="170" height="170" align ="right">
 <!-- badges: start -->
 [![R build status](https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar/workflows/R-CMD-check/badge.svg)](https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar/actions)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -26,7 +26,7 @@ launch_app()
 ```
 Below is a basic preview of the app in action.
 
-![](man/images/apppre.gif)
+![](man/figures/apppre.gif)
 
 ## Other functions within this package:
 
