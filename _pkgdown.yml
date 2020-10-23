@@ -12,3 +12,25 @@ navbar:
     github:
       icon: fa-github fa-lg
       href: https://github.com/etc5523-2020/r-package-assessment-Varsha-Ujjinni-VijayKumar
+
+reference:
+- title: "COVID19 datasets"
+  contents:
+  - corona
+  - usa
+  - india
+  - brazil
+  - russia
+  - USA_distinct
+  - IND_distinct
+  - BRA_distinct
+  - RUS_distinct
+- title: "Launch COVID-19 shiny dashboard"
+  contents:
+  - launch_app
+- title: "Other functions within the package"
+  contents:
+  - leaflet_maps
+  - stateInput
+  
+  

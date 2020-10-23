@@ -10,11 +10,12 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.align = 'left'
 )
 ```
 
-```{r setup}
+```{r setup,warning=FALSE,message=FALSE}
 library(COVID19top4)
 library(tidyverse)
 library(kableExtra)
@@ -34,17 +35,17 @@ in order. This package has a shiny app which gives the analysis and visualizatio
 
 **NOTE!!** : Please click on the country for the link to these datasets.
 
-Some Examples:
+## Some Examples on using the dataset within the package:
 
 The table helps us find the total number of cases by country for each date.
 
-```{r fig.width=5,fig.align='center',fig.height=5}
+```{r fig.width=5,fig.height=5}
 corona %>% group_by(date, id) %>% 
   summarise(total = sum(confirmed)) %>% tail(10) %>% 
   knitr::kable() %>% kableExtra::kable_styling(bootstrap_options = "striped")
 ```
 
-```{r warning=FALSE,fig.align='left',fig.height=5,fig.width=5}
+```{r warning=FALSE,fig.height=5,fig.width=5}
 corona %>% 
   group_by(date,id) %>%
   summarise(total = sum(confirmed)) %>% 
@@ -54,7 +55,7 @@ corona %>%
   theme_minimal()
 ```
 
-```{r warning=FALSE,fig.align='left',fig.height=5,fig.width=5}
+```{r warning=FALSE,fig.height=5,fig.width=5}
 corona %>% group_by(date,id) %>% 
   summarise(school_closing = sum(school_closing)) %>% 
   ggplot(aes(x = date, y = school_closing, color = id))+
@@ -63,3 +64,5 @@ corona %>% group_by(date,id) %>%
   theme_minimal()
 ```
 
+
+_The above examples are just a glimpse on how to use the datasets within this package, there are other datasets available for your exploration._

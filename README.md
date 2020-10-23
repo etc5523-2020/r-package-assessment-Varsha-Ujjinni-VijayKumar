@@ -53,7 +53,7 @@ corona
 ```
 ## Datasets available
 
-1. corona: This contains filtered data for USA,India, Brazil and Russia from the COVID19 package of CRAN.
+1. `corona`: This contains filtered data for USA,India, Brazil and Russia from the COVID19 package of CRAN.
 1. `usa`: This contains the cases, recovered for United States of America and its states.
 1. `india`: This contains the number of cases, recovered and deaths for India and its states.
 1. `brazil`: This contains the number of cases, recovered and deaths for Brazil and its states.
