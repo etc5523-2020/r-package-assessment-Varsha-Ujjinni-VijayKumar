@@ -6,6 +6,8 @@
 \alias{COVID19top4-package}
 \title{COVID19top4: A Shiny App for Top 4 COVID19 Affected Countries}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 It helps in containing a shiny application which launches COVID19 pandemic situation in the top four most affected countries as of October, 2020. This contains functions which help launch and use the app for information and knowledge on the pandemic during the time. A time graph to the world map for visualization is embeded into the application.
 }
 \seealso{
